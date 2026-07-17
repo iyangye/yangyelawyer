@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-paper: #F7F5F2;
+  --color-ink: #1A1A1A;
+  --color-accent: #C45D3E;
+  --color-muted: #6B6B6B;
+  --color-border: #D9D5D0;
+  --color-stone-200: #E8E4DF;
+
+  font-family: 'Noto Serif SC', 'Playfair Display', serif;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--color-ink);
+  background-color: var(--color-paper);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+  }
+}
+
+@layer components {
+  .editorial-link {
+    @apply relative inline-block text-ink transition-colors duration-300;
+  }
+
+  .editorial-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-px w-0 bg-accent transition-all duration-300 ease-editorial;
+  }
+
+  .editorial-link:hover::after {
+    @apply w-full;
+  }
+
+  .editorial-link:hover {
+    @apply text-accent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 border border-ink bg-ink px-6 py-3 text-sm font-mono uppercase tracking-widest text-paper transition-all duration-300 ease-editorial;
+  }
+
+  .btn-primary:hover {
+    @apply bg-accent border-accent;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 border border-ink bg-transparent px-6 py-3 text-sm font-mono uppercase tracking-widest text-ink transition-all duration-300 ease-editorial;
+  }
+
+  .btn-outline:hover {
+    @apply bg-ink text-paper;
+  }
+
+  .section-label {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-muted;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .stagger-1 { transition-delay: 0ms; }
+  .stagger-2 { transition-delay: 100ms; }
+  .stagger-3 { transition-delay: 200ms; }
+  .stagger-4 { transition-delay: 300ms; }
+  .stagger-5 { transition-delay: 400ms; }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
