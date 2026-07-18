@@ -29,7 +29,7 @@ export default function About() {
 
           <div className="md:col-span-5">
             <ScrollReveal delay={300}>
-              <div className="relative flex justify-center overflow-hidden border border-ink">
+              <div className="relative flex justify-center overflow-hidden">
                 <img
                   src={`${import.meta.env.BASE_URL}profile.jpg`}
                   alt="杨也律师"
