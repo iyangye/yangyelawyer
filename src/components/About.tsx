@@ -34,7 +34,7 @@ export default function About() {
                   src={`${import.meta.env.BASE_URL}profile.jpg`}
                   alt="杨也律师"
                   className="h-auto w-auto object-contain"
-                  style={{ maxHeight: '180px' }}
+                  style={{ maxHeight: '175px' }}
                 />
               </div>
             </ScrollReveal>
