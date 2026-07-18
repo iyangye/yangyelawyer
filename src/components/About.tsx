@@ -18,7 +18,7 @@ export default function About() {
           </h2>
         </ScrollReveal>
 
-        <div className="mt-10 grid items-stretch gap-12 md:grid-cols-12">
+        <div className="mt-10 grid items-start gap-12 md:grid-cols-12">
           <div className="md:col-span-7">
             <ScrollReveal delay={150}>
               <p className="font-body text-lg leading-relaxed text-ink/90">
@@ -28,12 +28,13 @@ export default function About() {
           </div>
 
           <div className="md:col-span-5">
-            <ScrollReveal delay={300} className="h-full">
-              <div className="relative flex h-full justify-center overflow-hidden border border-ink">
+            <ScrollReveal delay={300}>
+              <div className="relative flex justify-center overflow-hidden border border-ink">
                 <img
                   src={`${import.meta.env.BASE_URL}profile.jpg`}
                   alt="杨也律师"
-                  className="h-full w-auto object-contain"
+                  className="h-auto w-auto object-contain"
+                  style={{ maxHeight: '200px' }}
                 />
               </div>
             </ScrollReveal>
