@@ -41,32 +41,30 @@ export default function Contact() {
 
           <div className="lg:col-span-4">
             <ScrollReveal delay={200}>
-              <div className="space-y-8">
-                <div>
-                  <h3 className="font-mono text-xs uppercase tracking-widest text-paper/50">
-                    联系方式
-                  </h3>
-                  <ul className="mt-4 space-y-4">
-                    <li>
-                      <p className="font-body text-lg text-paper">
-                        电话：{profile.phone}
+              <div>
+                <h3 className="font-mono text-xs uppercase tracking-widest text-paper/50">
+                  联系方式
+                </h3>
+                <ul className="mt-4 space-y-4">
+                  <li>
+                    <p className="font-body text-lg text-paper">
+                      电话：{profile.phone}
+                    </p>
+                  </li>
+                  <li>
+                    <p className="font-body text-lg text-paper">
+                      微信：{profile.wechat}
+                    </p>
+                  </li>
+                  {profile.offices.map((office) => (
+                    <li key={office.name}>
+                      <p className="font-body text-sm text-paper/80">
+                        <span className="text-paper">{office.name}：</span>
+                        {office.address}
                       </p>
                     </li>
-                    <li>
-                      <p className="font-body text-lg text-paper">
-                        微信：{profile.wechat}
-                      </p>
-                    </li>
-                    {profile.offices.map((office) => (
-                      <li key={office.name}>
-                        <p className="font-body text-sm text-paper/80">
-                          <span className="text-paper">{office.name}：</span>
-                          {office.address}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                  ))}
+                </ul>
               </div>
             </ScrollReveal>
           </div>

@@ -57,22 +57,6 @@
     @apply text-accent;
   }
 
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 border border-ink bg-ink px-6 py-3 text-sm font-mono uppercase tracking-widest text-paper transition-all duration-300 ease-editorial;
-  }
-
-  .btn-primary:hover {
-    @apply bg-accent border-accent;
-  }
-
-  .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 border border-ink bg-transparent px-6 py-3 text-sm font-mono uppercase tracking-widest text-ink transition-all duration-300 ease-editorial;
-  }
-
-  .btn-outline:hover {
-    @apply bg-ink text-paper;
-  }
-
   .section-label {
     @apply font-mono text-xs uppercase tracking-[0.2em] text-muted;
   }
@@ -86,17 +70,5 @@
   .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
-  }
-
-  .stagger-1 { transition-delay: 0ms; }
-  .stagger-2 { transition-delay: 100ms; }
-  .stagger-3 { transition-delay: 200ms; }
-  .stagger-4 { transition-delay: 300ms; }
-  .stagger-5 { transition-delay: 400ms; }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
   }
 }

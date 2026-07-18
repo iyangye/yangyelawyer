@@ -4,20 +4,10 @@ export interface Skill {
   tags: string[];
 }
 
-export interface Stat {
-  value: number;
-  suffix: string;
-  label: string;
-}
-
 export interface Profile {
   name: string;
-  englishName: string;
-  tagline: string;
-  subTagline: string;
   bio: string[];
   skills: Skill[];
-  stats: Stat[];
   email: string;
   phone: string;
   wechat: string;
@@ -29,9 +19,6 @@ export interface Profile {
 
 export const profile: Profile = {
   name: "杨也律师",
-  englishName: "",
-  tagline: "",
-  subTagline: "",
   bio: [
     "杨也律师毕业于上海交通大学法律硕士专业，本科毕业于华东理工大学化学专业、信息技术与应用第二专业，持有专利代理师资格证书、CompTIA Project+项目管理认证等资质，具有外企、银行、律所的多元工作背景。2019年起开始执业专职从事律师业务，现于上海市杰豪律师事务所从业，执业以来，承办知识产权、公司股权、婚姻家事、劳动人事等民商事诉讼及非诉业务数百起；审阅、修订、起草各类合同逾千份；现担任多家企业常年法律顾问，专业素质和服务能力得到客户的肯定与好评。",
     "代表性案件",
@@ -55,12 +42,6 @@ export const profile: Profile = {
       description: "为中小企业提供日常法律支持，审阅修订各类合同，防范经营风险，助力企业稳健发展。",
       tags: ["合同审查", "风险防控", "法律咨询"]
     }
-  ],
-  stats: [
-    { value: 8, suffix: "+", label: "年从业经验" },
-    { value: 45, suffix: "+", label: "完成项目" },
-    { value: 12, suffix: "", label: "合作客户" },
-    { value: 3, suffix: "", label: "设计奖项" }
   ],
   email: "info@yangyelawyer.com",
   phone: "18516093524",

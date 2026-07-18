@@ -88,12 +88,11 @@ export default function Navbar() {
             </button>
           </div>
           <nav className="flex flex-1 flex-col items-start justify-center gap-8">
-            {navLinks.map((link, index) => (
+            {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
                 className="font-display text-display-md text-ink transition-colors hover:text-accent"
-                style={{ animationDelay: `${index * 80}ms` }}
               >
                 {link.label}
               </button>
