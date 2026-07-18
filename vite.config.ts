@@ -4,7 +4,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/yangyelawyer/',
+  // 使用相对路径，同时兼容自定义域名（根路径）和 github.io/yangyelawyer/（子路径）
+  base: './',
   build: {
     sourcemap: 'hidden',
   },
