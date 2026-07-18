@@ -57,7 +57,7 @@ export default function Hero() {
             >
               <div className="relative overflow-hidden border border-ink">
                 <img
-                  src="/hero.jpg"
+                  src={`${import.meta.env.BASE_URL}hero.jpg`}
                   alt="杨也律师"
                   className="h-auto w-full object-contain"
                 />

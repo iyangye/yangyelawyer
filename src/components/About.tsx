@@ -31,7 +31,7 @@ export default function About() {
             <ScrollReveal delay={300}>
               <div className="relative overflow-hidden border border-ink">
                 <img
-                  src="/profile.jpg"
+                  src={`${import.meta.env.BASE_URL}profile.jpg`}
                   alt="杨也律师"
                   className="h-auto w-full object-contain"
                 />
