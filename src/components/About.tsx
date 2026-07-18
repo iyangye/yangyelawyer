@@ -29,11 +29,11 @@ export default function About() {
 
           <div className="md:col-span-5">
             <ScrollReveal delay={300}>
-              <div className="relative overflow-hidden border border-ink">
+              <div className="relative flex justify-center overflow-hidden border border-ink">
                 <img
                   src={`${import.meta.env.BASE_URL}profile.jpg`}
                   alt="杨也律师"
-                  className="h-auto w-full object-contain"
+                  className="h-auto max-h-[400px] w-auto object-contain md:max-h-[420px]"
                 />
               </div>
             </ScrollReveal>
