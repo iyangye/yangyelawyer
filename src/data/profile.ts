@@ -66,7 +66,7 @@ export const profile: Profile = {
   phone: "18516093524",
   wechat: "eyangye",
   offices: [
-    { name: "浦西办公室", address: "黄浦区陆家浜路1332号南开大厦1404~1405室" },
-    { name: "浦东办公室", address: "浦东新区东靖路1831号先行国际综合商务楼806室" }
+    { name: "浦西办公室", address: "上海市黄浦区陆家浜路1332号南开大厦1404~1405室" },
+    { name: "浦东办公室", address: "上海市浦东新区东靖路1831号先行国际综合商务楼806室" }
   ]
 };

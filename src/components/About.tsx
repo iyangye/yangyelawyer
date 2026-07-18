@@ -18,46 +18,43 @@ export default function About() {
           </h2>
         </ScrollReveal>
 
-        <div className="mt-10 grid items-start gap-12 md:grid-cols-12">
-          <div className="md:col-span-7">
+        <div className="mt-10 grid items-stretch gap-12 md:grid-cols-12">
+          <div className="space-y-6 md:col-span-7">
             <ScrollReveal delay={150}>
               <p className="font-body text-lg leading-relaxed text-ink/90">
                 {intro}
               </p>
             </ScrollReveal>
+
+            {rest.map((paragraph, index) => {
+              const isHeading = index === 0;
+              return (
+                <ScrollReveal key={index} delay={150 + index * 80}>
+                  {isHeading ? (
+                    <h3 className="font-display text-2xl font-medium text-ink">
+                      {paragraph}
+                    </h3>
+                  ) : (
+                    <p className="font-body text-lg leading-relaxed text-ink/90">
+                      {paragraph}
+                    </p>
+                  )}
+                </ScrollReveal>
+              );
+            })}
           </div>
 
           <div className="md:col-span-5">
-            <ScrollReveal delay={300}>
-              <div className="relative flex justify-center overflow-hidden">
+            <ScrollReveal delay={300} className="h-full">
+              <div className="relative flex h-full justify-center overflow-hidden">
                 <img
                   src={`${import.meta.env.BASE_URL}profile.jpg`}
                   alt="杨也律师"
-                  className="h-auto w-auto object-contain"
-                  style={{ maxHeight: '175px' }}
+                  className="h-full w-auto object-contain"
                 />
               </div>
             </ScrollReveal>
           </div>
-        </div>
-
-        <div className="mt-12 space-y-6">
-          {rest.map((paragraph, index) => {
-            const isHeading = index === 0;
-            return (
-              <ScrollReveal key={index} delay={150 + index * 80}>
-                {isHeading ? (
-                  <h3 className="font-display text-2xl font-medium text-ink">
-                    {paragraph}
-                  </h3>
-                ) : (
-                  <p className="font-body text-lg leading-relaxed text-ink/90">
-                    {paragraph}
-                  </p>
-                )}
-              </ScrollReveal>
-            );
-          })}
         </div>
       </div>
     </section>
